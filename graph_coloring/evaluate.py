@@ -25,7 +25,7 @@ def get_clean_tokens(string):
   
   # Replace non-alphanumeric characters with spaces
   string = re.sub(r'[^a-zA-Z0-9]', ' ', string)
-
+  
   # Convert all letters to lowercase
   string = string.lower()
   
@@ -296,7 +296,6 @@ if path.exists(overrides_path):
 
 for model in models:
   for problem_set in problem_sets:
-    ps_name = problem_set['name']
     ps_short_name = problem_set['short_name']
     num_vertices = problem_set['num_vertices']
     num_colors = problem_set['num_colors']
@@ -406,29 +405,6 @@ for model in models:
             coloring = coloring_to_string(coloring)
           
           answers[m][j].append((coloring, evaluation))
-    
-    '''
-    for i in [frames.index('cities'), frames.index('friends')]:
-      contains_graph = 0
-      total_outputs = 0
-      
-      for j in range(len(repeat_dirs[i])):
-        for k in range(len(filenames)):
-          file = open(path.join(repeat_dirs[i][j], filenames[k]),
-                      'r', encoding='utf-8')
-          
-          for line in file.readlines():
-            if 'graph' in line:
-              contains_graph += 1
-              break
-          
-          total_outputs += 1
-          
-          file.close()
-      
-      print('%s %s %s: %d of %d outputs contain "graph"'\
-            % (model, ps_short_name, frames[i], contains_graph, total_outputs))
-    '''
     
     for m in range(len(mps_frame_indices)):
       i = mps_frame_indices[m]
