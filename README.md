@@ -4,7 +4,7 @@ This repository hosts a tweaked version of the code used to run the experiments 
 
 ## Requirements
 
-This codebase was developed for Python 3.11.7, with the packages Anthropic 0.32.0, Fireworks AI 0.15.3, Google Generative AI 0.7.2, and OpenAI 1.59.3 used for interfacing with LLMs (see `models.py`), and SciPy 1.14.1 and Matplotlib 3.9.2 used for generating plots (see `summarize.py`). Earlier or later versions of the requirements may or may not work.
+This codebase was developed for Python 3.11.7, with the packages Anthropic 0.32.0, Fireworks AI 0.15.3, Google Generative AI 0.7.2, and OpenAI 1.59.3 used for interfacing with LLMs (see `models.py`), and SciPy 1.14.1 and Matplotlib 3.9.2 used for generating plots (see `graph_coloring/summarize.py`). Earlier or later versions of the requirements may or may not work.
 
 ## Usage
 
